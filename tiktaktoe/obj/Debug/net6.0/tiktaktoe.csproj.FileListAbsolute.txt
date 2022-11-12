@@ -1,0 +1,15 @@
+C:\Users\RAVY\Desktop\C#\tiktaktoe\bin\Debug\net6.0\tiktaktoe.exe
+C:\Users\RAVY\Desktop\C#\tiktaktoe\bin\Debug\net6.0\tiktaktoe.deps.json
+C:\Users\RAVY\Desktop\C#\tiktaktoe\bin\Debug\net6.0\tiktaktoe.runtimeconfig.json
+C:\Users\RAVY\Desktop\C#\tiktaktoe\bin\Debug\net6.0\tiktaktoe.dll
+C:\Users\RAVY\Desktop\C#\tiktaktoe\bin\Debug\net6.0\tiktaktoe.pdb
+C:\Users\RAVY\Desktop\C#\tiktaktoe\obj\Debug\net6.0\tiktaktoe.csproj.AssemblyReference.cache
+C:\Users\RAVY\Desktop\C#\tiktaktoe\obj\Debug\net6.0\tiktaktoe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RAVY\Desktop\C#\tiktaktoe\obj\Debug\net6.0\tiktaktoe.AssemblyInfoInputs.cache
+C:\Users\RAVY\Desktop\C#\tiktaktoe\obj\Debug\net6.0\tiktaktoe.AssemblyInfo.cs
+C:\Users\RAVY\Desktop\C#\tiktaktoe\obj\Debug\net6.0\tiktaktoe.csproj.CoreCompileInputs.cache
+C:\Users\RAVY\Desktop\C#\tiktaktoe\obj\Debug\net6.0\tiktaktoe.dll
+C:\Users\RAVY\Desktop\C#\tiktaktoe\obj\Debug\net6.0\refint\tiktaktoe.dll
+C:\Users\RAVY\Desktop\C#\tiktaktoe\obj\Debug\net6.0\tiktaktoe.pdb
+C:\Users\RAVY\Desktop\C#\tiktaktoe\obj\Debug\net6.0\tiktaktoe.genruntimeconfig.cache
+C:\Users\RAVY\Desktop\C#\tiktaktoe\obj\Debug\net6.0\ref\tiktaktoe.dll
