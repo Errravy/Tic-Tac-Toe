@@ -7,8 +7,7 @@ public enum GameStatus
 {
     inprogress,
     draw,
-    player1,
-    player2,
+    Win,
 }
 public enum GameMode
 {

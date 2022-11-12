@@ -2,7 +2,7 @@ public class Computer :IPlayer
 {
     public Symbol symbol;
     Board board;
-    string name;
+    public string name;
     public Computer(string name,Symbol symbol,Board board)
     {
         this.name = name;

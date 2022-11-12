@@ -2,12 +2,13 @@ public class Game{
 
 
     string[] botName = {"Budi","Tono","Kuniawan","Cahyono","Sugeng"};
-    string? player1Name = "";
-    string? player2Name = "";
+    string? player1Name;
+    string? player2Name;
     string bot1Name    = "你怎么去";
     string bot2Name    = "请您原谅";
     public Board papan = new Board();
     public int insertSym;
+    public GameStatus gs = GameStatus.inprogress;
     public Game(GameMode gameMode)
     {
         switch(gameMode)
@@ -83,27 +84,38 @@ public class Game{
     }
     void PlayPVP(Player player1,Player player2)
     {
-        while(true)
+        while(gs == GameStatus.inprogress)
         {
             player1.insertSym();
+            gs = papan.CheckBoard(player1);
+            if(gs != GameStatus.inprogress){break;}
             player2.insertSym();
+            gs = papan.CheckBoard(player2);
+            if(gs != GameStatus.inprogress){break;}
         }
     }
     void PlayPVC(Player player1,Computer bot1)
     {
-        while(true)
+        while(gs == GameStatus.inprogress)
         {
             player1.insertSym();
+            gs = papan.CheckBoard(player1);
+            if(gs != GameStatus.inprogress){break;}
             bot1.RandomNumberInsert();
+            gs = papan.CheckBoard(bot1);
+            if(gs != GameStatus.inprogress){break;}
         }
     }
     void PlayCVC(Computer bot1,Computer bot2)
     {
-        papan.PrintBoard();
-        while(true)
+        while(gs == GameStatus.inprogress)
         {
             bot1.RandomNumberInsert();
+            gs = papan.CheckBoard(bot1);
+            if(gs != GameStatus.inprogress){break;}
             bot2.RandomNumberInsert();
+            gs = papan.CheckBoard(bot2);
+            if(gs != GameStatus.inprogress){break;}
         }
     }
 }
