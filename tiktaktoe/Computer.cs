@@ -1,8 +1,8 @@
 public class Computer :IPlayer
 {
-    public Symbol symbol;
-    Board board;
-    public string name;
+    private Symbol symbol;
+    private Board board;
+    private string name;
     public Computer(string name,Symbol symbol,Board board)
     {
         this.name = name;
@@ -17,7 +17,7 @@ public class Computer :IPlayer
     {
         return symbol;
     }
-    public void RandomNumberInsert()
+    public void InsertSym()
     {
         System.Console.WriteLine(name+" Turn");
         Random rnd = new Random();

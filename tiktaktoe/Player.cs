@@ -1,8 +1,8 @@
 public class Player :IPlayer
 {
-    public Symbol symbol;
-    public Board board;
-    public string name;
+    private Symbol symbol;
+    private Board board;
+    private string name;
     public Player(string name ,Symbol symbol,Board board)
     {
         this.name = name;
@@ -17,7 +17,7 @@ public class Player :IPlayer
     {
         return symbol;
     }
-    public void insertSym()
+    public void InsertSym()
     {
         board.PrintBoard();
         System.Console.WriteLine(name+" Turn");

@@ -1,14 +1,13 @@
 public class Game{
 
 
-    string[] botName = {"Budi","Tono","Kuniawan","Cahyono","Sugeng"};
-    string? player1Name;
-    string? player2Name;
-    string bot1Name    = "你怎么去";
-    string bot2Name    = "请您原谅";
-    public Board papan = new Board();
-    public int insertSym;
-    public GameStatus gs = GameStatus.inprogress;
+    private string[] botName = {"Budi","Tono","Kuniawan","Cahyono","Sugeng"};
+    private string? player1Name;
+    private string? player2Name;
+    private string bot1Name    = "你怎么去";
+    private string bot2Name    = "请您原谅";
+    private Board papan = new Board();
+    private GameStatus gs = GameStatus.inprogress;
     public Game(GameMode gameMode)
     {
         switch(gameMode)
@@ -47,7 +46,7 @@ public class Game{
         Symbol symbol2 = (angka == 1) ? Symbol.cross : Symbol.circle;
         Player player1 = new Player(player1Name,symbol1,papan);
         Player player2 = new Player(player2Name,symbol2,papan);
-        PlayPVP(player1,player2);
+        Play(player1,player2);
     }
     public void StartPVC()
     {
@@ -71,7 +70,7 @@ public class Game{
         Symbol symbol2 = (angka == 1) ? Symbol.cross : Symbol.circle;
         Player player1 = new Player(player1Name,symbol1,papan);
         Computer bot1 = new Computer(bot1Name,symbol2,papan);
-        PlayPVC(player1,bot1);
+        Play(player1,bot1);
     }
     public void StartCVC()
     {
@@ -80,40 +79,40 @@ public class Game{
         bot2Name = botName[rand.Next(5)];
         Computer bot1 = new Computer(bot1Name,Symbol.circle,papan);
         Computer bot2 = new Computer(bot2Name,Symbol.cross,papan);
-        PlayCVC(bot1,bot2);
+        Play(bot1,bot2);
     }
-    void PlayPVP(Player player1,Player player2)
+    void Play(Player player1,Player player2)
     {
         while(gs == GameStatus.inprogress)
         {
-            player1.insertSym();
+            player1.InsertSym();
             gs = papan.CheckBoard(player1);
             if(gs != GameStatus.inprogress){break;}
-            player2.insertSym();
+            player2.InsertSym();
             gs = papan.CheckBoard(player2);
             if(gs != GameStatus.inprogress){break;}
         }
     }
-    void PlayPVC(Player player1,Computer bot1)
+    void Play(Player player1,Computer bot1)
     {
         while(gs == GameStatus.inprogress)
         {
-            player1.insertSym();
+            player1.InsertSym();
             gs = papan.CheckBoard(player1);
             if(gs != GameStatus.inprogress){break;}
-            bot1.RandomNumberInsert();
+            bot1.InsertSym();
             gs = papan.CheckBoard(bot1);
             if(gs != GameStatus.inprogress){break;}
         }
     }
-    void PlayCVC(Computer bot1,Computer bot2)
+    void Play(Computer bot1,Computer bot2)
     {
         while(gs == GameStatus.inprogress)
         {
-            bot1.RandomNumberInsert();
+            bot1.InsertSym();
             gs = papan.CheckBoard(bot1);
             if(gs != GameStatus.inprogress){break;}
-            bot2.RandomNumberInsert();
+            bot2.InsertSym();
             gs = papan.CheckBoard(bot2);
             if(gs != GameStatus.inprogress){break;}
         }

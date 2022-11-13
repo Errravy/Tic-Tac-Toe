@@ -1,7 +1,7 @@
 public class Board
 {
-    public char[,] slot = new char[3, 3];
-    public int dimension; 
+    private char[,] slot = new char[3, 3];
+    private int dimension; 
     public GameStatus status = GameStatus.inprogress;
     public Board()
     {
@@ -132,7 +132,7 @@ public class Board
                 {
                     status = GameStatus.Win;
                     PrintBoard();
-                    System.Console.WriteLine(kar.name + " Win ");
+                    System.Console.WriteLine("{0} dengan symbol {1} Win",kar.GetName(),kar.GetSymbol());
                     break;
                 }
                 //kolom check
@@ -140,7 +140,7 @@ public class Board
                 {
                     status = GameStatus.Win;
                     PrintBoard();
-                    System.Console.WriteLine(kar.name + " Win ");
+                    System.Console.WriteLine("{0} dengan symbol {1} Win",kar.GetName(),kar.GetSymbol());
                     break;
                 }
                 //Diagonal Check
@@ -148,7 +148,7 @@ public class Board
                 {
                     status = GameStatus.Win;
                     PrintBoard();
-                    System.Console.WriteLine(kar.name + " Win ");
+                    System.Console.WriteLine("{0} dengan symbol {1} Win",kar.GetName(),kar.GetSymbol());
                     break;
                 }
                 //Anti Diagonal Check
@@ -156,7 +156,7 @@ public class Board
                 {
                     status = GameStatus.Win;
                     PrintBoard();
-                    System.Console.WriteLine(kar.name + " Win ");
+                    System.Console.WriteLine("{0} dengan symbol {1} Win",kar.GetName(),kar.GetSymbol());
                     break;
                 }
                 else if(dimension == 0)
@@ -182,7 +182,7 @@ public class Board
                 if(slot[i,0] == slot[i,1] && slot[i,1] == slot[i,2])
                 {
                     PrintBoard();
-                    System.Console.WriteLine(kar.name + " Win ");
+                    System.Console.WriteLine("{0} dengan symbol {1} Win",kar.GetName(),kar.GetSymbol());
                     status = GameStatus.Win;
                     break;
                 }
@@ -190,7 +190,7 @@ public class Board
                 else if(slot[0,i] == slot[1,i] && slot[1,i] == slot[2,i])
                 {
                     PrintBoard();
-                    System.Console.WriteLine(kar.name + " Win ");
+                    System.Console.WriteLine("{0} dengan symbol {1} Win",kar.GetName(),kar.GetSymbol());
                     status = GameStatus.Win;
                     break;
                 }
@@ -198,7 +198,7 @@ public class Board
                 else if(slot[0,0] == slot[1,1] && slot[1,1] == slot[2,2])
                 {
                     PrintBoard();
-                    System.Console.WriteLine(kar.name + " Win ");
+                    System.Console.WriteLine("{0} dengan symbol {1} Win",kar.GetName(),kar.GetSymbol());
                     status = GameStatus.Win;
                     break;
                 }
@@ -206,7 +206,7 @@ public class Board
                 else if(slot[0,2] == slot[1,1] && slot[1,1] == slot[2,0])
                 {
                     PrintBoard();
-                    System.Console.WriteLine(kar.name + " Win ");
+                    System.Console.WriteLine("{0} dengan symbol {1} Win",kar.GetName(),kar.GetSymbol());
                     status = GameStatus.Win;
                     break;
                 }
