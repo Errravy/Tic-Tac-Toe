@@ -159,7 +159,7 @@ public class Board
                     System.Console.WriteLine("{0} dengan symbol {1} Win",kar.GetName(),kar.GetSymbol());
                     break;
                 }
-                else if(dimension == 0)
+                else if(dimension == 0 && i == 2)
                 {
                     status = GameStatus.draw;
                     PrintBoard();
@@ -167,8 +167,8 @@ public class Board
                     break;
                 }
             }
-            if(status != GameStatus.inprogress)
-            break;
+            // if(status != GameStatus.inprogress)
+            // break;
         }
         return status;
     }
@@ -210,7 +210,7 @@ public class Board
                     status = GameStatus.Win;
                     break;
                 }
-                else if(dimension == 0)
+                else if(dimension == 0 && i == 2)
                 {
                     PrintBoard();
                     System.Console.WriteLine("Game Draw");
